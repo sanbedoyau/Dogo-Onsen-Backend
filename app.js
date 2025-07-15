@@ -5,6 +5,7 @@ import cors from 'cors';
 
 // Importar rutas
 import userRoutes from './routes/userRoutes.js';
+import bathRoutes from './routes/bathRoutes.js'
 
 
 dotenv.config();
@@ -17,6 +18,7 @@ app.use(express.json());
 
 // Rutas
 app.use('/api/usuarios', userRoutes)
+app.use('/api/baths', bathRoutes);
 
 mongoose.connect(process.env.MONGODB_URI)
     .catch((err) => console.log('Error: ', err));
