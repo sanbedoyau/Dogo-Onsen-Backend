@@ -25,7 +25,7 @@ export const loginUser = async (req, res) => {
         console.error('Error en login: ', err);
         res.status(500).json({ error: 'Error interno del servidor' });
     }
-};
+}
 
 export const createUser = async (req, res) => {
     try {
@@ -57,7 +57,7 @@ export const createUser = async (req, res) => {
         res.status(500).json({ error: 'Error interno al crear usuario' });
     }
 
-};
+}
 
 export const getAllUsers = async (_, res) => {
     try {
@@ -67,7 +67,7 @@ export const getAllUsers = async (_, res) => {
         console.error('Error al obtener usuarios:', err);
         res.status(500).json({ error: 'Error interno al buscar usuarios' });
     }
-};
+}
 
 export const editUser = async (req, res) => {
     try {
@@ -101,7 +101,7 @@ export const editUser = async (req, res) => {
         console.error('Error al editar usuario:', err);
         res.status(500).json({ error: 'Error interno del servidor' });
     }
-};
+}
 
 export const deleteUser = async (req, res) => {
     try {
@@ -118,4 +118,4 @@ export const deleteUser = async (req, res) => {
         console.error('Error al eliminar usuario:', err);
         res.status(500).json({ error: 'Error interno del servidor' });
     }
-};
+}

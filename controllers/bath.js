@@ -11,7 +11,7 @@ export const createBath = async (req, res) => {
         console.error('Error al crear baño', err);
         res.status(400).json({ error: 'Datos inválidos' });
     }
-};
+}
 
 export const getAllBaths = async (_, res) => {
     try {
@@ -21,7 +21,7 @@ export const getAllBaths = async (_, res) => {
         console.error('Error al obtener baños: ', err)
         res.status(500).json({ error: 'Error al obtener baños' });
     }
-};
+}
 
 export const editBath = async (req, res) => {
     try {
@@ -35,7 +35,7 @@ export const editBath = async (req, res) => {
     } catch (err) {
         res.status(400).json({ error: 'Datos inválidos' });
     }
-};
+}
 
 export const deleteBath = async (req, res) => {
     try {
@@ -46,4 +46,4 @@ export const deleteBath = async (req, res) => {
         console.error('Error al eliminar el baño', err)
         res.status(500).json({ error: 'Error al eliminar baño' });
     }
-};
+}
