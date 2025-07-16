@@ -3,9 +3,9 @@ import { Inventory } from '../models/inventory.js';
 export const createInventoryItem = async (req, res) => {
     try {
         const newItem = new Inventory(req.body);
-        await newItem.save();
+        const savedItem = await newItem.save();
 
-        res.status(201).json(newItem.toObject());
+        res.status(201).json(savedItem);
     } catch (err) {
         console.log('Error al crear producto:', err);
         res.status(400).json({ error: 'Datos inválidos' });
