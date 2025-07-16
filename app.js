@@ -7,6 +7,7 @@ import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
 import bathRoutes from './routes/bathRoutes.js'
 import inventoryRoutes from './routes/inventoryRoutes.js'
+import categoryRoutes from './routes/categoryRoutes.js';
 
 
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use('/api/usuarios', userRoutes);
 app.use('/api/baths', bathRoutes);
 app.use('/api/inventario', inventoryRoutes);
+app.use('/api/categoria', categoryRoutes);
 
 mongoose.connect(process.env.MONGODB_URI)
     .catch((err) => console.log('Error: ', err));
