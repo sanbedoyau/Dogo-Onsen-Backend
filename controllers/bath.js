@@ -1,5 +1,4 @@
 import { Bath } from '../models/bath.js';
-import { isValidObjectId } from '../utils/';
 
 export const createBath = async (req, res) => {
     try {
