@@ -113,7 +113,7 @@ export const deleteUser = async (req, res) => {
         if (!usuario) return res.status(404).json({ error: 'Usuario no encontrado' });
 
         await User.findByIdAndDelete(id);
-        res.json({ mensaje: 'Usuario eliminado correctamente' });
+        res.json({ message: 'Usuario eliminado correctamente' });
     } catch (err) {
         console.error('Error al eliminar usuario:', err);
         res.status(500).json({ error: 'Error interno del servidor' });
